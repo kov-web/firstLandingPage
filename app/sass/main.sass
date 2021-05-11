@@ -1,0 +1,1176 @@
+$red: #fc5f45
+$green: #38c695
+$purple: #b27cf5 
+$yellow: #feb960
+$bgGrey: rgba(38,39,50,0.85)
+$white: #f7f7f7
+
+
+*
+  box-sizing:border-box
+
+.wrapper
+  width: 1140px 
+  margin: 0 auto
+
+.before-header
+  height: 23px
+  background: linear-gradient(to top, #b3b3b3, #ffffff )
+
+.header
+  height: 75px
+  display: flex
+  justify-content: space-between
+ 
+.header__logo 
+  margin: 20px 0
+  p
+    font-family: 'Wisdom Script', sans-serif
+    font-size: 35px
+    color:#616161
+    line-height: 1
+    height: 35px
+    &:first-letter
+      color: $red
+    
+.nav-menu
+  width: 740px
+  margin: 30px 0
+  height: 15px
+  line-height: 1
+
+.menu-list
+  display: flex
+  justify-content: start
+  list-style: none
+  padding: 0
+  height: 15px
+    
+.menu-list__item 
+  padding-left: 20px 
+  a
+    color: #272727
+    font-weight: 600 
+    font-size: 13px
+    font-family: 'Poppins', sans-serif
+    text-decoration: none
+
+.section-number__number
+  margin: auto 
+  position: relative
+  top: 0
+  left: 0
+  width: 316px
+  height: 200px
+  background-size: contain
+  background-repeat: no-repeat
+  p
+    position: absolute
+    bottom: 0
+    // width: 282px
+    // left: 38px
+    font-family: LibreBaskerville
+    height: 40px
+    font-size: 55px
+    font-weight: bold
+    line-height: 0.1
+    color: #313131
+    white-space: nowrap
+
+.section-number__text
+  padding: 21px 0 80px 0
+  text-align: center
+  font-family: Poppins
+  font-size: 18px
+  text-align: center
+  color: #616161
+  line-height: 1  
+
+
+//------------- секция 0 --------------
+
+
+.section0
+  background-color: #3f4049
+  // width: 1140px
+ 
+  &__title
+    padding-top: 175px 
+    p
+      color: white
+      text-align: center
+      font-family: 'Libre Baskerville', sans-serif
+      font-size: 40px
+      line-height: 1.42
+
+  &__button
+    text-align: center
+    padding: 50px 0px 85px 0px
+    button, button:focus
+      height: 50px
+      border-radius: 25px
+      border: none
+      background-color: $red
+      color: white
+      outline: none
+      padding: 17px 41px
+      line-height: 1
+      font:
+        family: Poppins
+        size: 16px
+        weight: 600
+
+  &__columns
+    display: flex
+    justify-content: space-around
+
+  &__column
+    width: 380px
+  &__logo
+    width: 40px
+    margin: 0px auto
+
+  &__name-column
+    display: flex
+    justify-content: center
+    padding: 40px 0px 169px 0
+    font-family: Poppins, sans-serif
+    font:
+      size: 18px
+      weight: 500px
+    .green
+      color: $green
+    .purple
+      color: $purple
+    .yellow
+      color: $yellow
+
+
+//------------- секция 1 --------------
+
+
+.section1
+  margin: 150px 0
+
+  &__content
+    width: 1140px
+    height: 700px
+    position: relative
+    background-color: grey
+
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+
+  &__description
+    position: absolute
+    top: 75px
+    left: 488px
+    width: 652px
+    height: 550px
+    background-color: white
+  &__container
+    position: relative
+    height: 550px
+    display: flex
+
+  &__rightside-number
+    width: 256px
+    height: 199px
+    position: absolute
+    top: 5px
+    left: 6px
+    background-image: url(../img/section1/number01.png)
+
+  &__rightside-text
+    margin: 70px 0 0 0
+    position: absolute
+    width: 486px
+    height: 370px
+    left: 83px
+    h1
+      font-family: LibreBaskerville
+      font-size: 50.1px
+      line-height: 80px
+      font-weight: 700
+      color: #313131
+    p
+      font-family: Poppins
+      font-size: 15px
+      line-height: 27px
+      font-weight: 400
+      color: #616161
+
+  &__border-bottom
+    align-self: flex-end
+    display: flex
+    width: 100%
+    height: 3px
+  &__border
+    width: 163px
+    &_border1 
+      background-color: $red
+    &_border2 
+      background-color: $green
+    &_border3  
+      background-color: $purple
+    &_border4
+      background-color: $yellow
+
+
+//------------- секция 2 --------------
+
+
+.section-number__number_second
+  background-image: url(../img/section2/number02.png)
+
+.section2
+  padding-top: 6px
+  background-color: $white
+
+  &__middle-part
+    width: 1140px
+    height: 350px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 150px
+
+  &__item
+    width: 262px
+    background-color: white
+    display: flex
+    flex-direction: column
+    justify-content: center
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05)
+    &_first
+      border-bottom: 3px solid $red
+    &_second
+      border-bottom: 3px solid $green
+    &_third
+      border-bottom: 3px solid $purple      
+    &_fourth
+      border-bottom: 3px solid $yellow 
+  &__img
+    margin: 0px auto
+  &__title
+    margin: 0px auto
+    font-family: Poppins
+    font-size: 20px
+    font-weight: 500
+    padding: 22px 0px 22px 0px
+  &__description
+    margin: 0px auto
+    width: 196px
+    font-family: Poppins
+    font-size: 15px
+    line-height: 1.67
+    text-align: center
+    p
+      margin: 0px  
+
+  &__bottom-part
+    height: 500px
+    background-color: $bgGrey
+  &__last-part
+    display: flex
+    flex-direction: column
+    justify-content: start
+    height: 500px
+  &__header
+    padding: 136px 0 20px 0
+    font-family: Poppins
+    font-size: 30px
+    text-align: center
+    color: #ffffff
+    p
+      margin: 0
+      padding: 0
+
+  &__arrow
+    height: 80px
+    width: 80px
+    background-image: url(../img/section2/arrow.svg)
+    background-repeat: no-repeat
+    background-position: center
+    margin: 0 auto 41px 
+
+  &__footer-text
+    p
+      color: white
+      text-align: center
+      font-family: Poppins
+      font-size: 15px  
+
+
+//------------- секция 3 --------------  
+
+
+.section-number__number_thirth
+  background-image: url(../img/section3/number03.png)
+
+.section3
+  height: 1375px
+  padding-top: 4px
+
+  &__works
+    height: 920px
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+  &__work-item
+    width: 360px
+    height: 288px
+    margin: 0 10px 
+
+
+//------------- секция 4 --------------  
+
+
+.section-number__number_fourth
+  background-image: url(../img/section4/number04.png)
+
+.section4
+  height: 1750px
+  background-color: $white
+  padding-top: 11px
+
+  &__workers
+    width: 1140px
+    height: 350px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 9px
+
+  &__workers-photo
+    width: 263px
+    height: 350px
+    background-color: white
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05)
+    &_one
+      border-bottom: 3px solid $red
+    &_two 
+      border-bottom: 3px solid $green
+    &_three
+      border-bottom: 3px solid $purple
+    &_four
+      border-bottom: 3px solid $yellow
+
+  &__photo
+    width: 263px
+    height: 270px
+
+  &__name
+    font:
+      family: Poppins
+      size: 18px
+      weight: 500
+    text-align: center
+    &_first
+      color: $red
+    &_second
+      color: $green
+    &_thirth
+      color: $purple
+    &_fourth
+      color: $yellow
+
+  &__job
+    font-family: Poppins
+    font-size: 13px
+    text-align: center
+
+  &__triangle
+    margin-left: 75px
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.05)
+    width: 100px
+    height: 100px
+    position: relative
+    overflow: hidden
+    box-shadow: 0 16px 10px -50px rgba(0,0,0,0.05)
+    &::after
+      content: ""
+      position: absolute
+      width: 100px
+      height: 100px
+      background: #fff
+      transform: rotate(45deg) /* Не забываем про префиксы */
+      top: 75px
+      left: 0px
+      box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.05)
+
+  &__description
+    width: 1140px
+    height: 350px
+    background-color: #fff
+    margin-bottom: 150px
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05)
+
+  &__about-bennet
+    font:
+      family: Poppins
+      size: 20px
+      weight: 500
+    color: #272727
+    line-height: 1
+    padding: 75px 0 23px 96px
+
+  &__description-main-part
+    display: flex
+    justify-content: start
+    align-items: center
+
+  &__description-text
+    width: 634px
+    height: 151px
+    font:
+      family: Poppins
+      size: 15px
+    color: #616161
+    margin: 0 111px 0 96px
+    line-height: 1.8
+
+  &__description-logo
+    margin-right: 34px
+
+  &__description-list
+    height: 151px
+    width: 226px
+    border-left: 2px solid #efefef
+    list-style: none
+
+  &__description-ul
+    padding: 21px 0 0 45px
+  &__description-li
+    font:
+      family: Poppins
+      size: 15px
+    margin-bottom: 17px
+    line-height: 1
+    color: #616161
+    &_one
+      list-style-image: url(../img/section4/facebook.png)
+    &_two
+      list-style-image: url(../img/section4/twitter.png)
+    &_three
+      list-style-image: url(../img/section4/linkedin.png)      
+    &_four
+      list-style-image: url(../img/section4/instagram.png)
+
+  &__bottom-background
+    height: 462px
+    background-image: url(../img/section4/section4background.png)
+    background-size: cover
+    background-position-x: -165px
+
+  &__bottom-part
+    display: flex
+
+  &__bottom-column
+    width: 285px
+    height: 462px
+    background-color: #green
+
+  &__bottom-logo
+    width: 51px
+    height: 51px
+    margin: 145px auto 0
+
+  &__bottom-number
+    color: #fefefe
+    font:
+      family: Poppins
+      size: 20px
+      weight: 500
+    text-align: center
+    margin: 15px 0
+    
+  &__bottom-name  
+    color: rgba(254, 254, 254, 0.7)
+    font:
+      family: Poppins
+      size: 15px
+    text-align: center
+
+  &__bottom-circle
+    width: 15px
+    margin: 33px auto
+
+  &__circle-outer
+    width: 15px
+    height: 15px
+    border: 1px solid red
+    border-radius: 50%
+    background: #312a2f
+    &_one
+      border: 1px solid $red
+    &_two
+      border: 1px solid $green
+    &_three
+      border: 1px solid $purple
+    &_four
+      border: 1px solid $yellow
+
+  &__circle-inner
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    margin: 2px auto 
+    &_one
+      background: $red
+    &_two
+      background: $green
+    &_three
+      background: $purple
+    &_four
+      background: $yellow
+
+
+//------------- секция 5 --------------  
+
+
+.section-number__number_fifth
+  background-image: url(../img/section5/number05.png)
+
+.section5
+  height: 1726px
+  margin-top: 6px
+
+  &__main-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding-top: 51px
+
+  &__content-box
+    width: 556px
+    height: 300px
+    &_box1
+      background: linear-gradient(to bottom, #cbcbcb, #d7ada6)
+    &_box2
+      background: linear-gradient(to bottom, #cccccc, #a1c9bb)   
+    &_box3
+      background: linear-gradient(to bottom, #c9c9c9, #c4b4d7)
+    &_box4
+      background: linear-gradient(to bottom, #cccccc, #d9c6ac)
+
+  &__neighbor-layer
+    position: absolute
+    width: 1140px
+    display: flex
+    flex-direction: column
+    top: 0
+    left: 0
+
+  &__neighbor-box
+    width: 457px
+    height: 301px
+    background-color: #fff
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
+    display: flex
+    align-items: start
+    &_box1
+      border-bottom: 3px solid $red
+    &_box2
+      align-self: flex-end
+      border-bottom: 3px solid $green
+    &_box3
+      border-bottom: 3px solid $purple
+
+    &_box4
+      align-self: flex-end
+      border-bottom: 3px solid $yellow
+
+  &__left-part-number
+    margin: 40px 0 0 37px
+    line-height: 1
+    width: 84px
+    height: 84px
+    display: inline-block
+    font:
+      family: LibreBaskerville
+      size: 50px
+      weight: bold
+    letter-spacing: normal
+    line-height: normal
+    position: relative
+    color: #e0e0e0
+    &::after
+      content: ""
+      bottom: -19px
+      left: 39px
+      height: 118.7px
+      width: 2px
+      background-color: #e0e0e0
+      position: absolute
+      transform: rotate(45deg)
+
+  &__right-part
+    height: 171px
+    width: 273px
+    display: inline-block
+
+  &__right-title
+    font:
+      family: Poppins
+      size: 25px
+    color: #272727
+    line-height: 1
+    white-space: nowrap
+    margin: 73px 0 24px 0
+
+  &__right-text
+    font:
+      family: Poppins
+      size: 15px
+    line-height: 1.8
+
+
+//------------- секция 6 --------------  
+
+.section-number__number_sixth
+  background-image: url(../img/section6/number06.png)
+
+.section6
+  height: 1049px
+  background-color: $white
+  padding-top: 4px
+
+  &__content-box
+    height: 575px
+    display: flex
+    justify-content: space-between
+    
+  &__content-column
+    height: 575px
+    width: 360px
+    background-color: #ffffff
+    display: flex
+    flex-direction: column
+    align-items: center
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
+    &_green
+      border-top: 3px solid $green
+    &_red
+      border-top: 3px solid $red
+    &_purple
+      border-top: 3px solid $purple
+
+  &__column-title
+      text-align: center
+      margin: 35px 0 30px
+      font:
+        family: Poppins
+        size: 20px
+        weight: 500
+
+  &__circle
+    width: 106px
+    height: 106px
+    background-image: url(../img/section6/bgGreen.png)
+    background-repeat: no-repeat
+    background-size: cover
+    margin: 0 auto 24px
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__circle-text
+    height: 60px
+    font:
+      family: Poppins
+      size: 13px
+    text-align: center
+    color: #ffffff
+    line-height: 1.54
+    span
+      font-size: 25px
+
+  &__list
+    text-align: center
+    line-height: 40px
+    margin-bottom: 20px
+    li
+      font:
+        family: Poppins
+        size: 15px
+      color: #616161
+      span
+        color: #000
+        font-weight: 600
+    
+.button
+  width: 180px
+  height: 50px
+  border-radius: 25px
+  font:
+    family: Poppins
+    size: 16px
+    weight: 500
+  text-transform: uppercase
+  background-color: #fff
+  &_green
+    border: 2px solid $green
+    color: $green
+  &_red
+    border: 2px solid $red
+    background-color: $red 
+    color: #fff
+  &_purple
+    border: 2px solid $purple
+    color: $purple
+
+
+//------------- секция 7 --------------
+
+.section-number__number_seventh
+  background-image: url(../img/section7/number07.png)
+  p
+    color: #ffffff
+
+.section-number__text_seventh
+  color: #ffffff    
+
+.section7
+  padding-top: 6px
+  height: 874px
+  background-color: #3f4049
+
+  &__main-content
+    display: flex
+
+  &__leftside-part
+    width: 384px
+    height: 399px
+    border: 8px solid #999594
+    background: linear-gradient(to bottom, #cbcbcb, #d8aca5)
+
+  &__rightside-part
+    height: 352px
+    width: 756px
+    background-color: #ffffff
+    align-self: flex-end
+    position: relative
+    &::after
+      content: "“"
+      position: absolute
+      top: -77px
+      left: 0
+      color: rgba(224, 224, 224, 0.3)
+      font:
+        family: LibreBaskerville
+        size: 335.5px
+        weight: bold
+  
+  &__rightside-wrapper
+    width: 624px
+    height: 235px
+    margin: 41px 0 36px 55px
+
+  &__text
+    font:
+      family: Poppins
+      size: 15px
+    line-height: 1.8
+    color: #616161
+  &__name
+      font-size: 40px
+      line-height: 1
+      margin: 28px 0 10px 0
+  &__full-name
+    font:
+      family: Poppins
+      size: 18px
+      weight: 500
+
+  &__post
+    font:
+      family: Poppins
+      size: 13px
+    color: $red
+  &__circles
+    border-top: 3px solid $red
+    height: 40px
+    width: 756px
+    background-color: #3f4049
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+  &__circle
+    margin-left: 6px
+    width: 18px
+    height: 18px
+    border: 1px solid #ffffff
+    border-radius: 50%
+    background: #3f4049
+    &_active
+      border: 1px solid $red
+      position: relative
+      &::after
+        position: absolute
+        content: ' '
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $red
+        top: 3px
+        left: 3px
+
+
+//------------- секция 8 --------------
+
+
+.section-number__number_eighth
+  background-image: url(../img/section8/number08.png)
+
+.section8
+  height: 1050px
+
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: start
+    margin-bottom: 90px
+
+  &__content-items
+    width: 380px
+    height: 221px
+    display: flex
+    align-content: start
+    flex-wrap: wrap
+    padding-left: 23px
+
+
+  &__item-logo
+    width: 50px
+    height: 50px
+    background-repeat: no-repeat
+    background-size: contain
+    &_first
+      background-image: url(../img/section8/logo01.png)
+    &_second
+      background-image: url(../img/section8/logo02.png)
+    &_thirth
+      background-image: url(../img/section8/logo03.png)
+    &_fourth
+      background-image: url(../img/section8/logo04.png)
+    &_fiveth
+      background-image: url(../img/section8/logo05.png)
+    &_sixth
+      background-image: url(../img/section8/logo06.png)
+    
+  &__item-name
+    font:
+      family: Poppins
+      size: 18px
+      weight: 500
+    width: 130px
+    height: 72px 
+    word-spacing: pre-wrap
+    margin-left: 14px
+    line-height: 1.44
+    &_large
+      width: 150px
+      margin-left: 3px
+
+  &__item-text
+    font:
+      family: Poppins
+      size: 15px
+    color: #616161
+    line-height: 1.8
+    width: 317px
+    
+  &__footer-block
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 150px
+  &__footer-text
+    font:
+      family: Poppins
+      size: 25px
+    margin-right: 23px
+ 
+
+//------------- секция 9 --------------
+
+
+.section-number__number_nineth
+  background-image: url(../img/section9/number09.png)
+  background-size: contain
+  background-repeat: no-repeat
+  
+
+.section9
+  background-color: $white
+  padding-top: 5px
+
+  &__our-blog 
+    height: 1151px
+
+  &__main-content
+    height: 675px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-content: space-between
+
+  &__left-block
+    width: 555px
+    height: 675px
+    background-color: #ffffff
+    border-bottom: 3px solid $red
+
+  &__left-photo
+    width: 555px
+    height: 443px
+    background: linear-gradient(to bottom, #cacaca,#6b6b6b)
+    display: flex
+    align-items: flex-end
+  &__left-name
+    font:
+      family: Poppins
+      size: 15px
+      weight: 500
+    color: $red
+    text-transform: uppercase
+    padding: 0 0 35px 49px
+  &__left-date
+    font:
+      family: Poppins
+      size: 13px
+    padding: 0 0 35px 20px  
+    color: rgba(255, 255, 255, 0.7)
+
+  &__left-title
+    margin: 21px auto 0
+    width: 449px
+    font:
+      family: Poppins
+      size: 20px
+      weight: 500
+    line-height: 1.75
+
+  &__left-text
+    font:
+      family: Poppins
+      size: 15px
+    line-height: 1.8
+    width: 424px
+    margin: 13px 0 0 50px
+    a
+      font-weight: 500
+      color: #272727
+      text-decoration: none
+
+  &__right-block
+    width: 555px
+    height: 210px
+    padding: 33px 51px 0 38px
+    background-color: #ffffff
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
+    margin-bottom: 22px
+    &_green
+      border-bottom: 3px solid $green
+    &_purple
+      border-bottom: 3px solid $purple     
+    &_yellow
+      border-bottom: 3px solid $yellow
+      margin-bottom: 0px
+  
+  &__name
+    font:
+      family: Poppins
+      size: 15px
+      weight: 500
+    color: $green
+    text-transform: uppercase
+    display: inline-block
+    padding-right: 20px
+    
+  &__date
+    font:
+      family: Poppins
+      size: 13px
+    color: #616161
+    display: inline-block
+
+  &__title
+    font:
+      family: Poppins
+      size: 18px
+      weight: 500
+    color: #272727
+    padding: 10px 0 10px 0
+
+  &__text
+    font:
+      family: Poppins
+      size: 15px
+    color: #616161
+    line-height: 1.8
+
+  &__link
+    text-decoration: none
+    font-weight: 500
+    &_green
+      color: $green
+    &_purple
+      color: $purple
+    &_yellow
+      color: $yellow
+
+  &__newsletter
+    height: 425px
+    background-color: #ffffff
+
+  &__newsletter-title
+    text-align: center
+    color: #272727
+    padding: 140px 0 40px 0 
+    font:
+      family: Poppins
+      size: 30px  
+
+
+  &__form
+    height: 50px
+    width: 480px
+    margin: 0 auto
+
+  &__email
+    border: 2px solid #efefef
+    width: 300px
+    height: 50px
+    border-radius: 25px 0 0 25px
+    background-color: $white
+    padding-left: 29px
+    font:
+      family: Poppins
+      size: 16px  
+
+  &__button
+    font:
+      family: Poppins
+      size: 16px  
+      weight: 500
+    color:#ffffff
+    background-color: $red
+    width: 180px
+    height: 50px
+    border-radius: 0px 25px 25px 0
+    border: none
+
+
+//------------- секция 10 --------------
+
+
+.section-number__number_tenth
+  background-image: url(../img/section10/number10.png)
+
+.section10
+  background-color: #cccccc
+  height: 1278px
+  padding-top: 13px
+
+  &__form
+    width: 750px
+    margin: 0 auto
+
+  &__input
+    width: 360px
+    height: 50px
+    border-radius: 4px
+    border: solid 1px #efefef
+    background-color: #ffffff
+    text-align: center
+    margin-bottom: 24px
+    padding: 0
+    font:
+      family: Poppins
+      size: 16px  
+    color: #616161
+    &_name
+      margin-right: 30px
+    &_subject
+      margin-right: 30px
+    &_message
+      width: 750px
+      height: 200px
+    
+  &__btn
+    width: 190px
+    height: 50px
+    border-radius: 25px
+    font:
+      family: Poppins
+      size: 16px
+      weight: 500
+    text-transform: uppercase
+    background-color: $red
+    color: #ffffff
+    border: none
+    margin: 27px 475px 150px
+  
+  &__footer
+    background-color: rgba(38,39,50,0.85)
+    height: 225px
+    display: flex
+
+  &__footer-column
+    height: 225px
+    width: 285px 
+    &_first
+      border-bottom: 3px solid $red     
+    &_second
+      padding-left: 38px
+      border-bottom: 3px solid $green
+    &_thirth
+      padding-left: 46px
+      border-bottom: 3px solid $purple
+    &_fourth
+      padding-left: 53px
+      border-bottom: 3px solid $yellow
+
+  &__alexis
+    margin-top: 80px
+    text-align: center
+    font:
+      family: 'Wisdom Script', sans-serif
+      size: 50px
+      weight: 500 
+    color: #fef4f2   
+    &::first-letter
+      color: $red
+  
+  &__name
+    font:
+      family: Poppins
+      size: 18px
+      weight: 500
+    margin: 64px 0 26px 0
+    &_second  
+      color: $green
+    &_thirth
+      color: $purple
+    &_fourth
+      color: $yellow
+
+  &__adress
+    font:
+      family: Poppins
+      size: 16px
+    color: #fef4f2
+    line-height: 1.69
+
+  &__social-networks
+
+  &__logo
+    margin-right: 15px
+
+
+@media screen and ( max-width:  )
+  

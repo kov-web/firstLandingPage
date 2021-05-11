@@ -1,0 +1,13 @@
+@font-face {
+    font-family:'Wisdom Script';
+    src: url('../fonts/Wisdom-Script.eot');
+    src: url('../fonts/Wisdom-Script.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Wisdom-Script.woff2') format('../fonts/woff2'),
+    url('../fonts/Wisdom-Script.woff') format('../fonts/woff'),
+    url('../fonts/Wisdom-Script.ttf') format('truetype'),
+    url('../fonts/Wisdom-Script.svg#Wisdom-Script') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00AE;
+}
