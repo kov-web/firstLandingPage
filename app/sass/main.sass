@@ -6,12 +6,48 @@ $bgGrey: rgba(38,39,50,0.85)
 $white: #f7f7f7
 
 
+@mixin flexbox($content)
+  display: flex
+  justify-content: $content 
+
+
+@mixin font($weight, $size, $Ffamily...)
+  font-weight: $weight
+  font-size:  $size
+  font-family: $Ffamily
+
+// mixins популярных брекпоинтов
+@mixin desktop 
+  @media screen and (max-width: 1200px) 
+    @content
+    
+@mixin laptop 
+  @media screen and (max-width: 992px)
+    @content
+    
+@mixin tablets 
+  @media screen and (max-width: 768px) 
+    @content
+    
+@mixin phones 
+  @media screen and (max-width: 480px) 
+    @content
+   
+   
 *
   box-sizing:border-box
 
 .wrapper
   width: 1140px 
   margin: 0 auto
+  @include desktop
+    width: 900px
+  @include laptop
+    width: 700px
+  @include tablets
+    width: 479px
+  @include phones
+    width: 100%
 
 .before-header
   height: 23px
@@ -19,29 +55,36 @@ $white: #f7f7f7
 
 .header
   height: 75px
-  display: flex
-  justify-content: space-between
+  @include flexbox(space-between)
  
 .header__logo 
   margin: 20px 0
   p
-    font-family: 'Wisdom Script', sans-serif
-    font-size: 35px
+    @include font (normal, 2.1875em, 'Wisdom Script', sans-serif)
     color:#616161
     line-height: 1
     height: 35px
     &:first-letter
       color: $red
-    
+    @include laptop
+      margin-right: 60px
+    @include phones
+      margin-left: 10px
+
+
+
 .nav-menu
   width: 740px
   margin: 30px 0
   height: 15px
   line-height: 1
 
+  @include tablets
+    display: none
+
+
 .menu-list
-  display: flex
-  justify-content: start
+  @include flexbox(start)
   list-style: none
   padding: 0
   height: 15px
@@ -50,10 +93,11 @@ $white: #f7f7f7
   padding-left: 20px 
   a
     color: #272727
-    font-weight: 600 
-    font-size: 13px
-    font-family: 'Poppins', sans-serif
+    @include font(600, 0.8125em, 'Poppins', sans-serif)
     text-decoration: none
+  @include laptop
+    padding-left: 10px
+    @include font(400, 0.8125em, 'Poppins', sans-serif)
 
 .section-number__number
   margin: auto 
@@ -69,10 +113,8 @@ $white: #f7f7f7
     bottom: 0
     // width: 282px
     // left: 38px
-    font-family: LibreBaskerville
+    @include font (bold,  3.4375em, 'LibreBaskerville', sans-serif)
     height: 40px
-    font-size: 55px
-    font-weight: bold
     line-height: 0.1
     color: #313131
     white-space: nowrap
@@ -80,8 +122,7 @@ $white: #f7f7f7
 .section-number__text
   padding: 21px 0 80px 0
   text-align: center
-  font-family: Poppins
-  font-size: 18px
+  @include font (normal,  1.125em, 'Poppins', sans-serif)
   text-align: center
   color: #616161
   line-height: 1  
@@ -92,16 +133,18 @@ $white: #f7f7f7
 
 .section0
   background-color: #3f4049
-  // width: 1140px
  
   &__title
     padding-top: 175px 
     p
       color: white
       text-align: center
-      font-family: 'Libre Baskerville', sans-serif
-      font-size: 40px
+      @include font (normal, 2.5em, 'Libre Baskerville', sans-serif)
       line-height: 1.42
+      @include tablets
+        font-size: 2em
+      @include phones
+        font-size: 1.5em
 
   &__button
     text-align: center
@@ -115,36 +158,34 @@ $white: #f7f7f7
       outline: none
       padding: 17px 41px
       line-height: 1
-      font:
-        family: Poppins
-        size: 16px
-        weight: 600
-
+      @include font (500, 1em, 'Poppins', sans-serif)
+      @include phones
+        height: 30px
+        padding: 10px 20px
+        font-size: 0.7em
   &__columns
-    display: flex
-    justify-content: space-around
+    @include flexbox(space-around)
 
   &__column
     width: 380px
   &__logo
     width: 40px
     margin: 0px auto
+    @include phones
+  
 
   &__name-column
-    display: flex
-    justify-content: center
+    @include flexbox(center)
     padding: 40px 0px 169px 0
-    font-family: Poppins, sans-serif
-    font:
-      size: 18px
-      weight: 500px
+    @include font (500, 1.125em, 'Poppins', sans-serif)    
     .green
       color: $green
     .purple
       color: $purple
     .yellow
       color: $yellow
-
+    @include phones
+      font-size: 9px
 
 //------------- секция 1 --------------
 
@@ -153,15 +194,22 @@ $white: #f7f7f7
   margin: 150px 0
 
   &__content
-    width: 1140px
+    width: 100%
     height: 700px
     position: relative
     background-color: grey
+    @include laptop
+      background-color: #ffffff
 
   &__img
+    max-width: 50%
     position: absolute
     top: 0
     left: 0
+    @include tablets
+      z-index: 2
+    
+
 
   &__description
     position: absolute
@@ -170,10 +218,30 @@ $white: #f7f7f7
     width: 652px
     height: 550px
     background-color: white
+    @include desktop
+      top: 0
+      left: 450px
+      width: 50%
+      height: 565px
+    @include laptop
+      left: 350px
+    @include tablets
+      left: 0
+      z-index: 1
+      width: 100%
+      // position: static
+      // width: 100%
   &__container
     position: relative
     height: 550px
     display: flex
+    @include desktop
+      height: 568px
+    @include laptop
+      border: 3px solid #9a9997
+      border-bottom: none
+    @include tablets
+      border: none
 
   &__rightside-number
     width: 256px
@@ -182,25 +250,43 @@ $white: #f7f7f7
     top: 5px
     left: 6px
     background-image: url(../img/section1/number01.png)
+    @include tablets
+      left: 280px
 
+  
   &__rightside-text
     margin: 70px 0 0 0
     position: absolute
     width: 486px
     height: 370px
     left: 83px
+    @include desktop
+      width: 400px
+      left: 35px
+    @include laptop
+      width: 300px
+      left: 25px
+    @include tablets
+      width: 
     h1
-      font-family: LibreBaskerville
-      font-size: 50.1px
+      @include font (700, 3.13125em, 'LibreBaskerville', sans-serif)  
       line-height: 80px
-      font-weight: 700
       color: #313131
+      @include tablets
+        margin-left: 300px
+        width: 200px
+        font-size: 2.5em
     p
-      font-family: Poppins
-      font-size: 15px
+      @include font (400, 0.9375em, 'Poppins', sans-serif)      
       line-height: 27px
-      font-weight: 400
       color: #616161
+      @include laptop
+        line-height: 22px
+      @include tablets
+        margin: 200px 0 0 0
+
+        
+        
 
   &__border-bottom
     align-self: flex-end
@@ -209,6 +295,8 @@ $white: #f7f7f7
     height: 3px
   &__border
     width: 163px
+    @include tablets
+      display: none
     &_border1 
       background-color: $red
     &_border2 
@@ -230,7 +318,7 @@ $white: #f7f7f7
   background-color: $white
 
   &__middle-part
-    width: 1140px
+    width: 100%
     height: 350px
     display: flex
     justify-content: space-between
@@ -336,7 +424,7 @@ $white: #f7f7f7
   padding-top: 11px
 
   &__workers
-    width: 1140px
+    width: 100%
     height: 350px
     display: flex
     justify-content: space-between
@@ -400,7 +488,7 @@ $white: #f7f7f7
       box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.05)
 
   &__description
-    width: 1140px
+    width: 100%
     height: 350px
     background-color: #fff
     margin-bottom: 150px
@@ -557,7 +645,7 @@ $white: #f7f7f7
 
   &__neighbor-layer
     position: absolute
-    width: 1140px
+    width: 100%
     display: flex
     flex-direction: column
     top: 0
@@ -925,7 +1013,7 @@ $white: #f7f7f7
     border-bottom: 3px solid $red
 
   &__left-photo
-    width: 555px
+    width: 100%
     height: 443px
     background: linear-gradient(to bottom, #cacaca,#6b6b6b)
     display: flex
@@ -1171,6 +1259,4 @@ $white: #f7f7f7
   &__logo
     margin-right: 15px
 
-
-@media screen and ( max-width:  )
   
